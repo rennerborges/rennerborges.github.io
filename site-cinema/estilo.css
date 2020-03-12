@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    color: #fafafa;
+    color: white;
     font-family: ubuntu, sans-serif;
 }
 
@@ -32,6 +32,7 @@ header {
     margin: 20px 0px;
     display: flex;
     align-items: center;
+    border-radius: 5px;
     justify-content: center;
     background-color: #616161;
     box-shadow:
@@ -43,11 +44,14 @@ header {
 .todosFilmes > .container{
     width: 95%;
     height: 90%;
-    border-radius: 5px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     overflow: auto;
+}
+
+p {
+    color: #fafafa;
 }
 
 @media screen and (max-width: 1250px) {
