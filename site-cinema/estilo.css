@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    color: #fafafa;
+    font-family: ubuntu, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #212121;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    background-color: #d32f2f;
+    color: #fafafa;
+}
+.todosFilmes {
+    width: 95%;
+    height: 400px;
+    margin: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #616161;
+    box-shadow:
+    black 0px 1px 3px 0px,
+    black 0px 1px 1px 0px,
+    black 0px 2px 1px -1px
+}
+
+.todosFilmes > .container{
+    width: 95%;
+    height: 90%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    overflow: auto;
+}
+
+@media screen and (max-width: 1250px) {
+    .todosFilmes > .container{
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .tituloFilme {
+        display: flex;
+        justify-content: center;
+        margin: 0px 0px 10px 0px !important;
+    }
+    .conteudoFilme {
+        flex-direction: column;
+    }
+    .sinopse > p {
+        text-align: justify;
+    }
+}
+
+
+.viewFilme {
+    width: 250px;
+    min-width: 220px;
+    height: 100%;
+    border-radius: 5px;
+    margin-right: 5px;
+    border: 7px solid #212121;
+    cursor: pointer;
+    transition: 1s;
+    opacity: 0.7;
+}
+
+.viewFilme:hover{
+    opacity: 1;
+}
+
+.viewFilme > a > img {
+    width: 100%;
+    height: 100%;
+
+}
+
+.containerFilme {
+    height: auto;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #616161;
+    display: flex;
+    margin: 20px 0px;
+    flex-direction: column;
+    width: 95%;
+    box-shadow:
+    black 0px 1px 3px 0px,
+    black 0px 1px 1px 0px,
+    black 0px 2px 1px -1px
+}
+
+.textosInformativos {
+    padding: 0px 0px 20px 20px;
+}
+
+.tituloFilme {
+    margin-left: 240px;
+    margin-bottom: 10px;
+}
+
+.conteudoFilme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagensFilme {
+    width: 220px;
+}
+
+.imagensFilme > img {
+    width: 220px;
+    height: 330px;
+}
+
+.sinopse > h3 {
+    margin: 0px 0px 8px 0px;
+}
+
+h3 {
+    margin: 8px 0px;
+}
+
+li {
+    margin-left: 18px;
+    margin-bottom: 8px;
+}

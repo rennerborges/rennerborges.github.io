@@ -18,9 +18,9 @@ h1 {
     background-color: #efefef;
     opacity: 0.9;
     box-shadow:
-#A8A8A8 0px 1px 3px 0px,
-#C3C3C3 0px 1px 1px 0px,
-#D5D5D5 0px 2px 1px -1px
+    #A8A8A8 0px 1px 3px 0px,
+    #C3C3C3 0px 1px 1px 0px,
+    #D5D5D5 0px 2px 1px -1px
 }
 
 .perfil > img {
