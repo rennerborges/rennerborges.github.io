@@ -63,7 +63,7 @@ p {
     border: 7px solid #212121;
     cursor: pointer;
     transition: 1s;
-    opacity: 0.7;
+    opacity: 0.6;
 }
 
 .viewFilme:hover{
@@ -155,5 +155,8 @@ li {
     }
     .containerFilme {
         width: 90%;
+    }
+    .textosInformativos {
+        padding: 0px;
     }
 }
