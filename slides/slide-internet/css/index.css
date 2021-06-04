@@ -13,7 +13,7 @@
     white-space: nowrap;
 }
 
-#sectionAutor img {
+#sectionAutor .imgPerfil {
     display: block;
     min-width: 250px;
     min-height: 250px;
@@ -31,6 +31,30 @@
 .subtitle{
     font-size: 2rem !important;
 }
+
+.redesSociais {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.redesSociais a {
+    width: 3.5rem;
+    display: block;
+    margin: 0.5rem;
+    opacity: 0.8;
+    transition: opacity 0.2s ease-in-out
+}
+
+.redesSociais a:hover {
+    opacity: 1;
+}
+
+.redesSociais a > img {
+    width: 100%;
+    margin: 0px !important;
+}
+
 
 @media only screen and (min-width: 1000px){
     #evolucaoArpanet {
