@@ -170,11 +170,93 @@
 				</section>
 			</section>
 
-			<section data-background-image="./images/backgrounds/code.jpg" data-background-opacity="0.4"
-			data-background-position="center center">
-				<h1 class="title">Código</h1>
-				<img class="fragment" src="./images/diagramas/implantação.jpg" alt="Diagrama de implantação">
+			<section>
+				<section data-background-image="./images/backgrounds/code.jpg" data-background-opacity="0.4"
+				data-background-position="center center">
+					<h1 class="title">Código</h1>
+				</section>
+	
+				<section data-markdown
+				data-background-image="./images/backgrounds/code.jpg" data-background-opacity="0.4"
+				data-background-position="center center"
+				>
+					```java
+					public class Usuario {
+						private String id;
+						private String nome;
+						private String sobrenome;
+						private String cpf;
+						private String email;
+						private String telefone;
+						private String endereco;
+						private date dataNascimento;
+						private date dataRegistro;
+						
+						//...
+						
+						public void realizarCompra(){
+							//...
+						}
+						
+						public void realizarPagamento(){
+							//...
+						}
+						
+						public void realizarVenda(){
+							//...
+						}
+					}
+					```
+				</section>
+
+				<section data-markdown
+				data-background-image="./images/backgrounds/code.jpg" data-background-opacity="0.4"
+				data-background-position="center center"
+				>
+					```java 
+					public class Ingresso {
+						private String id;
+						private String nome;
+						private String descricao;
+						private String status;
+						private float valor;
+						private date dataCriacao;
+						
+						
+						public Ingresso(String nome, String descricao, float valor){
+							this.id = Util.RandomId();
+							this.nome = nome;
+							this.descricao = descricao;
+							this.valor = Math.abs(valor);
+							this.dataCriacao = new Date();
+						}
+						
+						//...
+					
+					}
+					```
+				</section>
+
+				<section data-markdown
+				data-background-image="./images/backgrounds/code.jpg" data-background-opacity="0.4"
+				data-background-position="center center"
+				>
+					```java
+					public class Carrinho {
+						private String id;
+						private String venda;
+						private ArrayList<Ingresso> ingressos;
+						private int quantidade;
+						private float valorTotal;
+						
+						//...
+					
+					}
+					```
+				</section>
+
 			</section>
+	
 
 			<section>
 				<section data-background-image="./images/backgrounds/design.jpg" data-background-opacity="0.3"
