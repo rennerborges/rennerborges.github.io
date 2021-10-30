@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Pipeline</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	<link rel="stylesheet" href="./css/index.css">
+
+
+	<style type="text/css">
+		img {
+			border-radius: 8px;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-background-image="https://images.unsplash.com/photo-1524169113253-c6ba17f68498?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80" data-background-opacity="0.4"
+				data-background-position="center center">
+				<h1 class="title">Pipeline</h1>
+				<h2 class="subtitle">IFGoiano Campus Morrinhos SO - TSI</h2>
+			</section>
+
+			<section data-background-image="./images/backgrounds/rock-n-roll-monkey.jpg" data-background-opacity="0.4"
+				data-background-position="top center">
+				<article id="sectionAutor">
+					<div>
+						<h1>Autor</h1>
+						<h2>Renner Borges</h2>
+						<div class="redesSociais">
+							<a href="https://www.facebook.com/renner.borges.52/" target="_blank">
+								<img src="./images/redesSociais/facebook.svg" alt="Facebook" />
+							</a>
+							<a href="https://www.instagram.com/renner_borges/" target="_blank">
+								<img src="./images/redesSociais/instagram.svg" alt="Instagram" />
+							</a>
+							<a href="https://www.linkedin.com/in/renner-borges-6390a81b8/" target="_blank">
+								<img src="./images/redesSociais/linkedin.svg" alt="Linkedin" />
+							</a>
+							<a href="https://github.com/RennerBorges" target="_blank">
+								<img src="./images/redesSociais/github.svg" alt="GitHub" />
+							</a>
+						</div>
+					</div>
+					<div>
+						<img class="imgPerfil" src="./images/perfil/renner.jpg" alt="Imagem do Renner Borges">
+					</div>
+				</article>
+			</section>
+
+			<section data-background-image="https://images.unsplash.com/photo-1633613286848-e6f43bbafb8d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80" data-background-opacity="0.3"
+			data-background-position="center center">
+				<h1 class="title">O que é?</h1>
+
+			</section>
+
+			<section data-background-image="https://images.unsplash.com/photo-1522442676585-c751dab71864?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80" data-background-opacity="0.3"
+			data-background-position="bottom center">
+				<h1 class="title">História</h1>
+				<ul>
+					<li class="fragment">Até o 386, os processadores da família x86 conseguiam processar apenas uma instrução de cada vez;</li>
+					<li class="fragment">Uma instrução simples podia ser executada em apenas um ciclo de clock;</li>
+					<li class="fragment">Enquanto instruções mais complexas demoravam vários ciclos de clock para serem concluídas;</li>
+					<li class="fragment">Para melhorar o desempenho do 486, a Intel resolveu usar o pipeline, uma técnica inicialmente usada em processadores RISC;</li>
+				</ul>
+			</section>
+
+			<section>
+				<section data-background-image="https://images.unsplash.com/photo-1489875347897-49f64b51c1f8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80" data-background-opacity="0.3"
+				data-background-position="center center">
+					<h1 class="title">Como funciona?</h1>
+				</section>
+
+				<section data-background-image="https://images.unsplash.com/photo-1489875347897-49f64b51c1f8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80" data-background-opacity="0.3"
+				data-background-position="center center">
+					<h1 class="title">Com pipeline</h1>
+					<img class="fragment" style="background-color: #FFF" src="https://blog.pantuza.com/uploads/e7f879d62220d0977a7254d90c3fe46f71440cc5"/>
+				</section>
+
+				<section data-background-image="https://images.unsplash.com/photo-1489875347897-49f64b51c1f8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80" data-background-opacity="0.3"
+				data-background-position="center center">
+					<h1 class="title">Sem pipeline</h1>
+					<img class="fragment" style="background-color: #FFF" src="https://blog.pantuza.com/uploads/5903534f86b5e369d1c4b572df8dc20f9235c2fd"/>
+				</section>
+			</section>
+
+			<section data-background-image="https://images.unsplash.com/photo-1516490394832-6c4c8e26b15b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80" data-background-opacity="0.3"
+			data-background-position="center center">
+				<h1 class="title">Estágios</h1>
+				<p>A quantidade de operações paralelas que um processador é capaz de executar é chamada de estágios. Um pipeline de 8 estágios, por exemplo, consegue executar 8 operações concorrentes</p>
+			</section>
+
+
+			<section data-background-image="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80" data-background-opacity="0.3"
+			data-background-position="center center">
+				<h1 class="title">5 estágios principais</h1>
+				<ul>
+					<li class="fragment">Busca de instrução;</li>
+					<li class="fragment">Busca de operandos;</li>
+					<li class="fragment">Operação na ULA;</li>
+					<li class="fragment">Acesso à memória;</li>
+					<li class="fragment">Gravação em um registrador;</li>
+				</ul>
+			</section>
+
+			<section data-background-image="https://images.unsplash.com/photo-1579447167432-ba8b796e5de1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" data-background-opacity="0.2"
+			data-background-position="bottom center">
+				<h1 class="title">Limitações</h1>
+				<ul>
+					<li class="fragment">Conflitos estruturais ;</li>
+					<li class="fragment">Conflitos de controle;</li>
+				</ul>
+			</section>
+
+			<section data-background-image="https://images.unsplash.com/photo-1626624324881-ed66ed6bf239?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1472&q=800" data-background-opacity="0.2"
+			data-background-position="center center">
+				<h1 class="title">Sistemas operacionais</h1>
+				<ul>
+					<li class="fragment">Unix;</li>
+					<li class="fragment">Windows;</li>
+					<li class="fragment">Linux;</li>
+					<li class="fragment">Mac OS;</li>
+				</ul>
+			</section>
+
+			<section data-background-image="https://images.unsplash.com/photo-1518770660439-4636190af475?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80" data-background-opacity="0.2"
+			data-background-position="center center">
+				<h1 class="title">Processadores</h1>
+				<ul>
+					<li class="fragment">486;</li>
+					<li class="fragment">Pentium;</li>
+					<li class="fragment">Pentium II;</li>
+					<li class="fragment">Athlon Thunderbird;</li>
+					<li class="fragment">Pentium 4;</li>
+					<li class="fragment">i7;</li>
+				</ul>
+			</section>
+
+			<section data-background-image="./images/backgrounds/end.jpg" data-background-opacity="0.4"
+				data-background-position="center center">
+				<h1 class="title">Fim</h1>
+			</section>
+
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/zoom/zoom.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/search/search.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+
+		// Also available as an ES module, see:
+		// https://revealjs.com/initialization/
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			center: true,
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight]
+		});
+
+		Reveal.configure({ pdfSeparateFragments: false });
+	</script>
+</body>
+
+</html>
