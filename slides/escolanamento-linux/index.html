@@ -1,0 +1,230 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Escalonamento no Linux</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	<link rel="stylesheet" href="./css/index.css">
+
+
+	<style type="text/css">
+		img {
+			border-radius: 8px;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-background-image="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80" data-background-opacity="0.4"
+				data-background-position="center center">
+				<h1 class="title">Escalonamento no Linux</h1>
+				<h2 class="subtitle">IFGoiano Campus Morrinhos SO - TSI</h2>
+			</section>
+
+			<section data-background-image="./images/backgrounds/rock-n-roll-monkey.jpg" data-background-opacity="0.4"
+				data-background-position="top center">
+				<article id="sectionAutor">
+					<div>
+						<h1>Autor</h1>
+						<h2>Renner Borges</h2>
+						<div class="redesSociais">
+							<a href="https://www.facebook.com/renner.borges.52/" target="_blank">
+								<img src="./images/redesSociais/facebook.svg" alt="Facebook" />
+							</a>
+							<a href="https://www.instagram.com/renner_borges/" target="_blank">
+								<img src="./images/redesSociais/instagram.svg" alt="Instagram" />
+							</a>
+							<a href="https://www.linkedin.com/in/renner-borges-6390a81b8/" target="_blank">
+								<img src="./images/redesSociais/linkedin.svg" alt="Linkedin" />
+							</a>
+							<a href="https://github.com/RennerBorges" target="_blank">
+								<img src="./images/redesSociais/github.svg" alt="GitHub" />
+							</a>
+						</div>
+					</div>
+					<div>
+						<img class="imgPerfil" src="./images/perfil/renner.jpg" alt="Imagem do Renner Borges">
+					</div>
+				</article>
+			</section>
+
+			<section data-background-image="https://images.unsplash.com/photo-1620207418302-439b387441b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1567&q=80" data-background-opacity="0.3"
+			data-background-position="center center">
+				<h1 class="title">Básico do escalonador</h1>
+				<ul>
+					<li class="fragment">Prioridade;</li>
+					<li class="fragment">Quantum;</li>
+					<li class="fragment">Threads.</li>
+				</ul>
+			</section>
+
+			<section data-background-image="https://images.unsplash.com/photo-1620121684840-edffcfc4b878?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80" data-background-opacity="0.3"
+			data-background-position="bottom center">
+				<h1 class="title">Curiosidades do Linux</h1>
+				<ul>
+					<li class="fragment">Considera que os processos só existem enquanto grupos de threads;</li>
+					<li class="fragment">Escalona apenas threads.</li>
+				</ul>
+			</section>
+
+			<section data-background-image="https://images.unsplash.com/photo-1552083974-186346191183?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" data-background-opacity="0.3"
+			data-background-position="center center">
+				<h1 class="title">Metas do escalonador Linux</h1>
+
+				<ul>
+					<li class="fragment">Escalonamento de tempo-real;</li>
+					<li class="fragment">Interatividade;</li>
+					<li class="fragment">Eficiência;</li>
+					<li class="fragment">Justiça e prevenção de Starvation;</li>
+				</ul>
+			</section>
+
+			<section data-background-image="https://images.unsplash.com/photo-1553949345-eb786bb3f7ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" data-background-opacity="0.3"
+			data-background-position="center center">
+				<h1 class="title">Requisitos do escalonamento do Linux</h1>
+
+				<ul>
+					<li class="fragment">Apresentar boa performance em programas interativos, mesmo com carga elevada;</li>
+					<li class="fragment">Distribuir de maneira justa o tempo da CPU;</li>
+					<li class="fragment">O escalonador é preemptivo;</li>
+					<li class="fragment">Cada processo possui uma prioridade, recalculada dinamicamente;</li>
+				
+				</ul>
+			</section>
+			
+			<section data-background-image="https://images.unsplash.com/photo-1553949345-eb786bb3f7ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" data-background-opacity="0.3"
+			data-background-position="center center">
+				<h1 class="title">Requisitos do escalonamento do Linux</h1>
+
+				<ul>
+					<li>Ser eficiente em máquinas SMP (Symmetric Multi Processor);</li>
+					<li class="fragment">Possuir suporte para tempo real;</li>
+					<li class="fragment">O escalonador entrega a CPU para o processo que possui a maior prioridade.</li>
+				</ul>
+			</section>	
+
+			<section data-background-image="https://images.unsplash.com/photo-1523895665936-7bfe172b757d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" data-background-opacity="0.3"
+			data-background-position="center center">
+				<h1 class="title">Categorias de processos considerados</h1>
+
+				<ul>
+					<li class="fragment">Processos interativos (time-sharing);</li>
+					<li class="fragment">Processos em tempo real.</li>
+				</ul>
+			</section>
+
+			<section data-background-image="https://images.unsplash.com/photo-1528804431125-842f17de657b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" data-background-opacity="0.3"
+			data-background-position="center center">
+				<h1 class="title">Processos de tempo real</h1>
+
+				<ul>
+					<li class="fragment">FCFS;</li>
+					<li class="fragment">Round Robin.</li>
+				</ul>
+			</section>
+
+			<section data-background-image="https://images.unsplash.com/photo-1489875347897-49f64b51c1f8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80" data-background-opacity="0.3"
+			data-background-position="center center">
+				<h1 class="title">Kernel 1.0.x</h1>
+
+				<ul>
+					<li class="fragment">Escalonamento baseado em threads;</li>
+					<li class="fragment">Toda tarefa pega um número fixo de quantum;</li>
+					<li class="fragment">O escalonador verifica todos os processos;</li>
+					<li class="fragment">Linux era somente de console.</li>
+				</ul>
+			</section>
+
+			<section data-background-image="https://images.unsplash.com/photo-1489875347897-49f64b51c1f8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80" data-background-opacity="0.3"
+			data-background-position="center center">
+				<h1 class="title">Kernel 2.4</h1>
+
+				<ul>
+					<li class="fragment">Poucas diferenças quando comparado ao anterior;</li>
+					<li class="fragment">Principais diferenças;
+						<ul>
+							<li>Classes de escalonamento</li>
+							<li>Conceito de “bondade”</li>
+							<li>A escolha do escalonador é feita com base na classe de escalonamento</li>
+						</ul>
+					</li>
+
+				</ul>
+			</section>
+
+			<section data-background-image="https://images.unsplash.com/photo-1489875347897-49f64b51c1f8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80" data-background-opacity="0.3"
+			data-background-position="center center">
+				<h1 class="title">Kernel 2.6</h1>
+
+				<ul>
+					<li class="fragment"> Complexidade O(1);</li>
+					<li class="fragment">Tenta identificar os processos interativos;</li>
+					<li class="fragment">Código do algoritmo 3x maior que o anterior;</li>
+					<li class="fragment">Todas as tarefas em execução separadas por prioridade;</li>
+					<li class="fragment">O algoritmo sempre escolhe o array de maior prioridade.</li>
+				</ul>
+			</section>
+
+			<section data-background-image="https://images.unsplash.com/photo-1489875347897-49f64b51c1f8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80" data-background-opacity="0.3"
+			data-background-position="center center">
+				<h1 class="title">Kernel 2.6.23</h1>
+
+				<ul>
+					<li class="fragment">Reescrita completa;</li>
+					<li class="fragment">Algoritmo mais simples;</li>
+					<li class="fragment">Não utiliza os conceitos de
+						<ul>
+							<li>Tempo de sleep</li>
+							<li>Identificação de processo interativo</li>
+							<li>Array de prioridade</li>
+						</ul>
+					</li>
+					<li class="fragment">Utiliza árvore rubro-negra;</li>
+				</ul>
+			</section>
+
+			<section data-background-image="./images/backgrounds/end.jpg" data-background-opacity="0.4"
+				data-background-position="center center">
+				<h1 class="title">Fim</h1>
+			</section>
+
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/zoom/zoom.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/search/search.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+
+		// Also available as an ES module, see:
+		// https://revealjs.com/initialization/
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			center: true,
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight]
+		});
+
+		Reveal.configure({ pdfSeparateFragments: false });
+	</script>
+</body>
+
+</html>
